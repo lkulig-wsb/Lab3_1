@@ -1,5 +1,5 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -24,6 +24,13 @@ public class Main {
         //3.3 Przetestuj działanie operatora trójargumentowego
         System.out.println("Zad.2");
         System.out.println("--------------------------------------");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Wprowadź dowolną liczbę całkowitą: ");
+        int liczbaCal = scanner.nextInt();
+        String wynik = (liczbaCal % 2 == 0) ? "Jest to liczba Parzysta!" : "Jest to liczba Nieparzysta!";
+        System.out.println(wynik);
+        //System.out.println("Liczba całkowita to: " + liczbaCal);
+
 
     }
 }
