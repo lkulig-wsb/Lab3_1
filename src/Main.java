@@ -59,6 +59,44 @@ public class Main {
         //3.5 Przetestuj działanie operatorów oraz ustal ich kolejność
         System.out.println("Zad.5");
         System.out.println("--------------------------------------");
+        int x = 3;
+        int y = 5;
+        int z = 12;
+        //Operator arytmetyczny
+        int wynik1 = (x + y) * z;
+        int wynik2 = x + y * z;
+        System.out.println("(x + y) * z =  " + wynik1);
+        System.out.println("x + y * z =  " + wynik2);
+        //3.6 Porównać działanie operatora == i metody equals.
+        System.out.println("Zad.6");
+        System.out.println("--------------------------------------");
+        //Operator '==' porównuje referencje obiektów, a nie ich zawartość.
+        //Jeżeli porównywane obiekty będą znajdowały się pod tą samą referencją w pamięci to zwrócona zostanie
+        //wartość true
+        String String1 = new String(" Przykładowy tekst.");
+        String String2 = new String(" Przykładowy tekst.");
+        System.out.println("String1 == String2 >> " + (String1 == String2) + " - ta sama wartość, inne miejsce w pamięci.");
+        String String3 = new String ("Kolejne porównanie");
+        String String4 = new String ("Inne wartości w porównywanych stringach");
+        System.out.println("String3 == String4 >> " + (String3 == String4) + " - inna wartość, inne miejsce w pamięci." );
+        String String5 = String3;
+        System.out.println("String5 == String3 >> " + (String5 == String3) + " - to samo miejsce w pamięci.");
 
+        //W przypadku typów prostych, jak int czy char, operator '==', porówna wartości
+        int v = 7;
+        int w = 7;
+
+        System.out.println( "Porównanie int v z int w (v == w) " +  (v == w));
+
+        //Metoda equals służy do porównywania zawartości obiektów, a nie ich referencji,
+        // dlatego też zazwyczaj jest przesłaniana przez klasy.
+
+        System.out.println("String1.equals(String2) >> " + String1.equals(String2) + " - te same wartości.");
+        System.out.println("String3.equals(String4) >> " + String3.equals(String4) + " - różne wartości.");
+
+        //3.7 Napisz metodę, która przyjmuje tablicę liczb całkowitych i odwraca jej kolejność.
+        //Wykorzystaj pętlę for do przejścia przez tablicę.
+
+        //System.out.println("\n\n");
     }
 }
