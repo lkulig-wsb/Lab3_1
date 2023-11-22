@@ -96,7 +96,46 @@ public class Main {
 
         //3.7 Napisz metodę, która przyjmuje tablicę liczb całkowitych i odwraca jej kolejność.
         //Wykorzystaj pętlę for do przejścia przez tablicę.
+        System.out.println("Zad.7");
+        System.out.println("--------------------------------------");
+        //Utworzenie tablicy liczb całkowitych
+        int[] TablicaInt = {1,2,3,4,5,6,7,8,9,10};
+        //Wypisanie elementów tablicy za pomocą pętli for
+        System.out.print("TablicaINT: ");
+        for (int i = 0; i < TablicaInt.length; i++)
+        {
+            System.out.print(TablicaInt[i] + " ");
+        }
+        //Odwrócenie kolejności elementów Tablicy za pomocą metody odwrocTablice
+        odwrocTablice(TablicaInt);
+        System.out.println();
+        // Wypisanie elementów tablicy po odwróceniu
+        System.out.print("Odwrócona TablicaINT: ");
+        //Inny rodzaj pętli for
+        for (int value: TablicaInt)
+        {
+            System.out.print(value + " ");
+        }
 
-        //System.out.println("\n\n");
+
+
+
+
+
+
+
+        System.out.println("\n");
+    }
+    //Metoda odwracająca tablicę
+    public static void odwrocTablice(int[] array)
+    {
+        //uzyskanie długości (licz. elem) tablicy
+        int dlugosc = array.length;
+        for(int i = 0, j = dlugosc - 1; i < j; i++, j--)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
     }
 }
