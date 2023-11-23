@@ -131,6 +131,23 @@ public class Main {
             System.out.print(args[i] + "\t");
         }
 
+        //3.9 Przygotować dwie metody zwracające boolean i wyświetlające informacje na ekran,
+        //wykorzystać obie w instrukcji if z wykorzystaniem operatorów logicznych.
+        System.out.println();
+        System.out.println("Zad.9");
+        System.out.println("--------------------------------------");
+        System.out.print("Wprowadź liczbę całkowitą: ");
+        int liczba = scanner.nextInt();
+        if(czyLiczbaParzysta(liczba) && czyLiczbaWiększa(liczba))
+        {
+            System.out.println("Liczba jest parzysta i większa od 20!");
+        }else if (czyLiczbaParzysta(liczba) && !czyLiczbaWiększa(liczba))
+        {
+            System.out.println("Liczba jest parzysta, ale nie większa od 20!");
+        } else if (!czyLiczbaParzysta(liczba) && czyLiczbaWiększa(liczba)) {
+            System.out.println("Liczba nie jest parzysta, ale jest większa od 20!");
+        }else {System.out.println("Liczba nie jest parzysta i liczba nie jest większa od 20!");}
+
         System.out.println("\n");
     }
     //Metoda odwracająca tablicę
@@ -144,6 +161,16 @@ public class Main {
             array[i] = array[j];
             array[j] = temp;
         }
+    }
+    // Metoda sprawdzająca czy liczba jest parzysta
+    public static boolean czyLiczbaParzysta(int liczba)
+    {
+        return liczba % 2 == 0;
+    }
+    //Metoda sprawdzająca czy liczba jest większa od 20
+    public static boolean czyLiczbaWiększa(int liczba)
+    {
+        return liczba > 20;
     }
 
 
