@@ -117,12 +117,19 @@ public class Main {
             System.out.print(value + " ");
         }
 
+        //3.8 Wykonaj kod z instrukcji laboratoryjnej dotyczący parametrów programów wyniki
+        //umieść w sprawozdaniu.
 
+        System.out.println();
+        System.out.println("Zad.8");
+        System.out.println("--------------------------------------");
 
-
-
-
-
+        System.out.println("Liczba wprowadzonych parametrów: " + args.length);
+        System.out.print("Wprowadzone parametry to: ");
+        for(int i=0; i < args.length; i++)
+        {
+            System.out.print(args[i] + "\t");
+        }
 
         System.out.println("\n");
     }
@@ -138,4 +145,6 @@ public class Main {
             array[j] = temp;
         }
     }
+
+
 }
