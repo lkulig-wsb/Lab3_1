@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("== LAB_3 ==");
-        //3.2Konwersja znaków na liczby odpowiednich typów (int, float, long, double)
+        //3.2 Konwersja znaków na liczby odpowiednich typów (int, float, long, double)
         System.out.println("Zad.2");
         System.out.println("--------------------------------------");
         String txt = "20231119";
         System.out.println("Łańcuch znaków: " + txt);
+        // Parsowanie ciągu znaków na liczbę całkowitą za pomocą metody Integer.parseInt().
+        // Jako argument do metody parseInt() przekazujemy zmienną String o nazwie txt.
         //Konwersja na int
         int zmiennaInt = Integer.parseInt(txt);
         System.out.println("Konwersja łańcuchu znaków na int: " + zmiennaInt);
@@ -24,9 +26,13 @@ public class Main {
         //3.3 Przetestuj działanie operatora trójargumentowego
         System.out.println("Zad.3");
         System.out.println("--------------------------------------");
+        //Wczytanie liczby całkowitej od użytkownika
         Scanner scanner = new Scanner(System.in);
         System.out.print("Wprowadź dowolną liczbę całkowitą: ");
         int liczbaCal = scanner.nextInt();
+        //Użycie operatora trójargumentowego ('? :') do sprawdzenia czy liczba jest parzysta, czy nie.
+        //Jeżeli reszta z dzielenia przez 2 wynosi 0, to wyświetlany jest komunikat że liczba jest parzysta, innaczej
+        //komunikat że liczba jest nieparzysta.
         String wynik = (liczbaCal % 2 == 0) ? "Jest to liczba Parzysta!" : "Jest to liczba Nieparzysta!";
         System.out.println(wynik);
         //System.out.println("Liczba całkowita to: " + liczbaCal);
@@ -62,11 +68,42 @@ public class Main {
         int x = 3;
         int y = 5;
         int z = 12;
+        int a = 10;
+        int b = 20;
         //Operator arytmetyczny
         int wynik1 = (x + y) * z;
         int wynik2 = x + y * z;
         System.out.println("(x + y) * z =  " + wynik1);
         System.out.println("x + y * z =  " + wynik2);
+        //Hierarchia operatorów
+        // 1. x * y - mnożenie 3 * 5 daj 15
+        // 2. a++ postinkrementacja zwraca oryginalną wartość 'a', czyli 10, a następnie zwiększa a o 1,
+        // więc po tej operacji a wynosi 11
+        // 3. (a++)/a daje nam wynik 10/11 ponieważ postinkrementacja miała miejsce w poprzedniej operacji
+        // 4. (z+x*y) - a (10/11), następnie podstawiamy wartości (12+15) - (10 + (10/11))
+        // 10/11 jest zaokrąglane w dół do 0 w kontekście liczb całkowitych
+        // 5. 27 - (10 + 0) = 27 - 10 = 17
+        System.out.println("Test hierarchii operatorów: ");
+        System.out.println("(z+x*y)-a+(a++)/a = " + ((z+x*y)-a+(a++)/a));
+        //int q = 11;
+        //int r = 10;
+        //System.out.println(r/q);
+        //Operatory jednoargumentowe (iteracja, dekrementacje).
+        System.out.println("z = "+ z);
+        // inkrementacja, zwiększenie zmiennej z o 1, czyli z+1.
+        z++;
+        System.out.println("z++  =" + z);
+        System.out.println("y = " + y);
+        // dekrementacja, zmiejszenie wartości zmiennej y o 1, czyli y-1.
+        y--;
+        System.out.println("y-- = " + y);
+        System.out.println("a = " + a);
+        ++a;
+        System.out.println("++a = " + a);
+        System.out.println("b = " + b);
+        --b;
+        System.out.println("--b = " + b);
+
         //3.6 Porównać działanie operatora == i metody equals.
         System.out.println("Zad.6");
         System.out.println("--------------------------------------");
@@ -101,7 +138,7 @@ public class Main {
         //Utworzenie tablicy liczb całkowitych
         int[] TablicaInt = {1,2,3,4,5,6,7,8,9,10};
         //Wypisanie elementów tablicy za pomocą pętli for
-        System.out.print("TablicaINT: ");
+        System.out.print("TablicaInt[]: ");
         for (int i = 0; i < TablicaInt.length; i++)
         {
             System.out.print(TablicaInt[i] + " ");
@@ -110,7 +147,7 @@ public class Main {
         odwrocTablice(TablicaInt);
         System.out.println();
         // Wypisanie elementów tablicy po odwróceniu
-        System.out.print("Odwrócona TablicaINT: ");
+        System.out.print("Odwrócona TablicaInt[]: ");
         //Inny rodzaj pętli for
         for (int value: TablicaInt)
         {
